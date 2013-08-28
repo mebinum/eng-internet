@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="chatApp">
+<head>
+	<title>SWEN90002 - Engineering for Internet Applications - Lab 2</title>
+	<link rel="stylesheet" href="css/lib-styles.css">
+	<link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+	<div class="page" >
+		<header class="page__header">
+		 Lab 2 - Online chat
+		</header>
+		<!-- <ng-view></ng-view> -->
+		<section class="page__content" ng-controller="MainCtrl"
+			ng-init="chatMessages=[]" redraw>
+			<div ng-repeat="chat in chatMessages | orderBy:'timestamp':reverse" class="chat__container">
+				<div class="chat__container--arrow "></div>
+				<div>
+					<div class="chat__bubble">{{chat.message}}</div>
+					<div class="chat__meta">
+						<p>
+							{{chat.timestamp | humaneDate}}<span class="chat__meta--username"> -- {{chat.username}}</span>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+		<footer class="page__footer">
+			<div class="chat__box" ng-controller="ChatFormCtrl" >
+				<form id="chatForm" name="chatForm">
+					<label for="chat-username">User: </label>
+					<input type="text" id="chat-username" class="chat__username" ng-model="chat.username" required>
+					<label for="chat-input">Chat: </label> 
+					<input type="text" id="chat-input" class="chat__input" ng-model="chat.message" on-enter="sendChat()" required>
+					<a class="chat__submit icon-comments" id="chat-submit" ng-click="sendChat()" ng-disabled="isChatValid()">&nbsp;</a><!-- triggerOn='doSubmit' -->
+				</form>
+			</div>
+		</footer>
+	</div>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="lib/jquery/jquery.js"></script>
+<script type="text/javascript" src="lib/humane.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

@@ -11,3 +11,5 @@ bin/
 .classpath
 .DS_Store
 node_modules/
+.settings/
+.dropbox
