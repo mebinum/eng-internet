@@ -1,0 +1,118 @@
+ body{
+ 	overflow-x:hidden;
+ }
+
+.page {
+
+}
+
+.page__header,.page__footer {
+	text-align: center;
+	padding: 0.5em 0;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	z-index: 100;
+}
+
+.page__header{
+	color: #fff;
+	top: 0;
+	background: #100;
+}
+
+.page__footer {
+	bottom: 0;
+	color: #fff;
+}
+
+.page__content {
+	position: relative;
+	width: 100%;
+	padding: 3.3em 0;
+}
+
+.chat__box {
+	margin: 0 auto;
+	width: 70%;
+	background-color: #4575b4;
+	padding: 0.6em 0.9em;
+	border-radius: 12px;
+	border: 1px solid #e1e1e8;
+}
+
+.chat__input {
+	border: 1.5px solid #A09C9C;
+	border-radius: 4px;
+	height: 1.5em;
+	line-height: 15px;
+	width: 80%;
+}
+
+
+.chat__bubble {
+	border-radius: 9px;
+	background: rgba(145, 191, 219, 0.47);
+	padding: 0.9em;
+	margin: 0.2em;
+	max-width: 100%;
+	word-wrap: break-word;
+}
+
+.chat__container{
+	position: relative;
+	margin-bottom: 25px;
+}
+
+.chat__container--arrow:after{
+   content: "";
+   position: absolute;
+   bottom: 33.5px;
+   left: 80%;
+   border-top: 20px solid black;
+   border-top-color: rgba(145, 191, 219, 0.47);
+   border-left: 20px solid transparent;
+   border-right: 20px solid transparent; 
+}
+
+.chat__container .chat__arrow,.chat__container .chat__arrow:after{
+	position: absolute;
+	display: block;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-style: solid;
+	bottom: 1px;
+	border-width: 10px;
+	content: " ";
+}
+
+.chat__meta {
+	margin-top: 3px;
+	padding-bottom: 50.5px;
+	position: relative;
+}
+
+.chat__submit {
+	font-size: 29px;
+	margin-left: 4px;
+	cursor: pointer;
+	line-height: 12px;
+}
+
+.chat__submit:hover{
+	color: #57B1E4;
+}
+
+.chat__meta p {
+	left: 60%;
+	position: absolute;
+	padding-top: 5px;
+}
+
+.chat__arrow{
+	bottom: -11px;
+	left: 80%;
+	border-top-color: rgba(0,0,0,0.25); 
+	border-bottom-width: 0;
+}
