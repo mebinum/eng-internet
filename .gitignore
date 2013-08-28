@@ -4,3 +4,10 @@
 *.jar
 *.war
 *.ear
+components/*
+target/*
+node_modules/*
+target/*
+bin/
+.classpath
+.DS_Store
